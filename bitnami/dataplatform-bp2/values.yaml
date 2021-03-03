@@ -170,6 +170,10 @@ spark:
                   values:
                     - worker
                     - master
+                - key: app.kubernetes.io/name
+                  operator: In
+                  values:
+                    - spark                    
             topologyKey: "kubernetes.io/hostname"
     resources:
       ## Recommended values for cpu and memory requests
