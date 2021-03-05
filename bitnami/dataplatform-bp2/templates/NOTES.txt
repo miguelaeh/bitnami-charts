@@ -37,15 +37,3 @@ To access the Spark service from your local machine execute the following:
    kubectl port-forward --namespace {{ .Release.Namespace }} svc/{{ include "subcomponent.service.name" ( dict "componentName" "spark" "context" $ ) }} 8080:80 &
    echo "Spark service available at : http://127.0.0.1:8080"
 {{- end -}}
-
-{{- if .Values.zookeeper.enabled }}
-
-***************
-** Zookeeper **
-***************
-
-To access the Zookeeper service from your local machine execute the following:
-
-   kubectl port-forward --namespace {{ .Release.Namespace }} svc/{{ include "subcomponent.service.name" ( dict "componentName" "zookeeper" "context" $ ) }} 2181:2181 &
-   echo "Zookeeper service available at : http://127.0.0.1:2181"
-{{- end -}}

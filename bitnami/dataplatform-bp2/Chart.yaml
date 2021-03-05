@@ -19,10 +19,6 @@ dependencies:
     name: logstash
     repository: https://charts.bitnami.com/bitnami
     version: 3.x.x    
-  - condition: zookeeper.enabled
-    name: zookeeper
-    repository: https://charts.bitnami.com/bitnami
-    version: 6.x.x
   - name: common
     repository: https://charts.bitnami.com/bitnami
     tags:
