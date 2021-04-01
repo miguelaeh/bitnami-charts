@@ -41,6 +41,8 @@ keywords:
   - kibana
   - zookeeper
   - apache
+  - tanzuobservability
+  - wavefront
 maintainers:
   - email: containers@bitnami.com
     name: Bitnami
