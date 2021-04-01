@@ -19,6 +19,10 @@ dependencies:
     name: logstash
     repository: https://charts.bitnami.com/bitnami
     version: 3.x.x    
+  - condition: wavefront.enabled
+    name: wavefront
+    repository: https://charts.bitnami.com/bitnami
+    version: 2.x.x    
   - name: common
     repository: https://charts.bitnami.com/bitnami
     tags:
