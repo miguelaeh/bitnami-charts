@@ -1,18 +1,16 @@
 # Data Platform Blueprint 2 with Kafka-Spark-Elasticsearch
 
 Enterprise applications increasingly rely on large amounts of data, that needs be distributed, processed, and stored.
-Open source and commercial supported software stacks are available to implement a data platform, that can offer
-common data management services, accelerating the development and deployment of data hungry business applications.
+Open source and commercial supported software stacks are available to implement a data platform, that can offer common data management services, accelerating the development and deployment of data hungry business applications.
 
 This Helm chart enables the fully automated Kubernetes deployment of such multi-stack data platform, covering the following software components:
 
--   Apache Kafka – Data distribution bus with buffering capabilities
--   Apache Spark – In-memory data analytics
+-   Apache Kafka              – Data distribution bus with buffering capabilities
+-   Apache Spark              – In-memory data analytics
 -   Elasticsearch with Kibana – Data persistence and search
--   Logstash    - Data Processing Pipeline
+-   Logstash                  - Data Processing Pipeline
 
-These containerized stateful software stacks are deployed in multi-node cluster configurations, which is defined by the
-Helm chart blueprint for this data platform deployment, covering:
+These containerized stateful software stacks are deployed in multi-node cluster configurations, which is defined by the Helm Chart blueprint for this data platform deployment, covering:
 
 -   Pod placement rules – Affinity rules to ensure placement diversity to prevent single point of failures and optimize load distribution
 -   Pod resource sizing rules – Optimized Pod and JVM sizing settings for optimal performance and efficient resource usage
@@ -37,6 +35,7 @@ $ helm install my-release bitnami/dataplatform-bp2
 This chart bootstraps Data Platform Blueprint-2 deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 The "Small" size data platform in default configuration deploys the following:
+
 1. Zookeeper with 3 nodes to be used for both Kafka
 2. Kafka with 3 nodes using the zookeeper deployed above
 3. Elasticsearch with 3 master nodes, 2 data nodes, 2 coordinating nodes and 1 kibana node
@@ -223,7 +222,7 @@ In case you need to deploy the data platform with Wavefront Observability Framew
 ```console
 $ helm install my-release bitnami/dataplatform-bp2 \
     --set kafka.metrics.kafka.enabled=true \
-    --set kafka.metrics.jmx.enabled=true \    
+    --set kafka.metrics.jmx.enabled=true \
     --set spark.metrics.enabled=true \
     --set elasticsearch.metrics.enabled=true \
     --set logstash.metrics.enabled=true \
