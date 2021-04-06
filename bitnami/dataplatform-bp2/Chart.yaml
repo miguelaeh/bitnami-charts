@@ -18,11 +18,11 @@ dependencies:
   - condition: logstash.enabled
     name: logstash
     repository: https://charts.bitnami.com/bitnami
-    version: 3.x.x    
+    version: 3.x.x
   - condition: wavefront.enabled
     name: wavefront
     repository: https://charts.bitnami.com/bitnami
-    version: 2.x.x    
+    version: 2.x.x
   - name: common
     repository: https://charts.bitnami.com/bitnami
     tags:
@@ -31,7 +31,7 @@ dependencies:
 description: OCTO Data platform Kafka-Spark-Elasticsearch Helm Chart
 engine: gotpl
 home: https://github.com/bitnami/charts/tree/master/bitnami/dataplatform-bp2
-icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
+icon: https://bitnami.com/assets/stacks/dataplatform-bp2/img/dataplatform-bp2-stack-220x234.png
 keywords:
   - dataplatform
   - kafka
@@ -55,7 +55,7 @@ sources:
   - https://github.com/bitnami/bitnami-docker-elasticsearch
   - https://www.elastic.co/products/elasticsearch
   - https://github.com/bitnami/bitnami-docker-logstash
-  - https://www.elastic.co/products/logstash  
+  - https://www.elastic.co/products/logstash
   - https://zookeeper.apache.org/
   - https://github.com/bitnami/bitnami-docker-zookeeper
 version: 0.1.0
